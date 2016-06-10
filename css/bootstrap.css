@@ -1149,6 +1149,12 @@ img {
 .img-circle {
   border-radius: 50%;
 }
+.img-logo {
+  float: left;
+  margin: 0 20px 0 0;
+  clear: left;
+  width: 60px;
+}
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -5255,6 +5261,7 @@ a.thumbnail.active {
 }
 .list-group-item {
   position: relative;
+  overflow: auto;
   display: block;
   padding: 10px 15px;
   margin-bottom: -1px;
@@ -5275,7 +5282,9 @@ button.list-group-item {
   color: #3e3f3a;
 }
 a.list-group-item .list-group-item-heading,
-button.list-group-item .list-group-item-heading {
+button.list-group-item .list-group-item-heading,
+li.list-group-item .list-group-item-heading {
+  font-weight:500;
   color: inherit;
 }
 a.list-group-item:hover,
