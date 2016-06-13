@@ -4970,8 +4970,8 @@ a.badge:focus {
   margin-left: 3px;
 }
 .jumbotron {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 20px;
+  padding-bottom: 20px;
   margin-bottom: 30px;
   color: inherit;
   background-color: #f8f5f0;
@@ -4982,7 +4982,7 @@ a.badge:focus {
 }
 .jumbotron p {
   margin-bottom: 15px;
-  font-size: 21px;
+  font-size: 18px;
   font-weight: 200;
 }
 .jumbotron > hr {
@@ -5854,6 +5854,11 @@ button.list-group-item-danger.active:focus {
 .well-sm {
   padding: 9px;
   border-radius: 3px;
+}
+.well-block {
+  background-color: inherit;
+  margin-top: 20px;
+  margin-bottom: inherit;
 }
 .close {
   float: right;
