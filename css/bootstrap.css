@@ -1155,6 +1155,12 @@ img {
   clear: left;
   width: 60px;
 }
+.img-logo-sm {
+  float: left;
+  margin: 4px 0 4px 4px;
+  clear: left;
+  width: 16px;
+}
 hr {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -4996,6 +5002,19 @@ a.badge:focus {
 }
 .jumbotron .container {
   max-width: 100%;
+}
+.link-sm{
+  font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-size: 10px;
+}
+table,th,td{
+  text-align: center;
+  vertical-align: middle;
+}
+td {
+  height: 18px;
+  vertical-align: center;
 }
 @media screen and (min-width: 768px) {
   .jumbotron {
