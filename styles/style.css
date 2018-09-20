@@ -53,6 +53,13 @@ h1, h2, h3 {
   font-size: 1.3em;
 }
 
+.profile-photo {
+  border-radius: 50%;
+  width: 180px;
+  height: 180px;
+  margin-bottom: 20px;
+}
+
 .pubtitle { font-weight: bold; }
 .abstract {
   display: none;
