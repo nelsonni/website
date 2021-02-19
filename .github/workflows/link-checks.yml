@@ -1,0 +1,13 @@
+name: URL Link Checks
+on:
+  page_build: # trigger on page_build for GitHub Pages
+  schedule:
+  - cron:  '0 0 1 * *' # run monthly
+jobs:
+  linkinator:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: JustinBeckwith/linkinator-action@v1 # checks links in Markdown (*.md) files
+      - uses: technote-space/broken-link-checker-action@v2 # checks links in regular files
+    
