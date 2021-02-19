@@ -7,7 +7,12 @@ jobs:
   linkinator:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: JustinBeckwith/linkinator-action@v1 # checks links in Markdown (*.md) files
-      - uses: technote-space/broken-link-checker-action@v2 # checks links in regular files
-    
+      - name: Clone repository
+        uses: actions/checkout@v2
+      - name: Run linkinator
+        uses: JustinBeckwith/linkinator-action@v1
+        with:
+          paths: "*.html,*.md"
+          markdown: true
+          recurse: true
+          linksToSkip: "node_modules/,assets/,synectics/,styles/"
