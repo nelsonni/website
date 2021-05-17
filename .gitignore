@@ -1,1 +1,5 @@
+# prebuilt software images
 synectics/*
+
+# MacOS directory index files
+.DS_Store
