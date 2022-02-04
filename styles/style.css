@@ -97,3 +97,10 @@ h1, h2, h3 {
   font-size: small;
 }
 
+.program-icon {
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 20px;
+}
+
