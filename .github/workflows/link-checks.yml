@@ -15,4 +15,4 @@ jobs:
           paths: "*.html,*.md"
           markdown: true
           recurse: true
-          linksToSkip: "node_modules/,assets/,synectics/,styles/"
+          linksToSkip: "node_modules/,assets/,synectics/,styles/,https://www.linkedin.com/*"
