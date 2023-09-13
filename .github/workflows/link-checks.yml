@@ -2,13 +2,13 @@ name: URL Link Checks
 on:
   page_build: # trigger on page_build for GitHub Pages
   schedule:
-  - cron:  '0 0 1 * *' # run monthly
+    - cron: "0 0 1 * *" # run monthly
 jobs:
   linkinator:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
       - name: Run linkinator
         uses: JustinBeckwith/linkinator-action@v1
         with:
