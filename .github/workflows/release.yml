@@ -1,7 +1,6 @@
 name: Repository Dispatch
 
 on:
-  workflow_dispatch:
   repository_dispatch:
     types: [release]
 
@@ -11,4 +10,41 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - run: echo ${{ github.event.client_payload.version }}
+      - run: |
+          awk -v block='
+          <span> ORS\
+            <h3>${{ github.event.client_payload.raw_version }}</h3> ORS\
+            <span class="venue"> ORS\
+              <ul> ORS\
+                <li> ORS\
+                  <h4> ORS\
+                    <a href="https://github.com/EPICLab/synectic/releases/tag/${{ github.event.client_payload.version }}">Release Notes</a> ORS\
+                  </h4> ORS\
+                </li> ORS\
+                <li> ORS\
+                  <h4>Downloads:</h4> ORS\
+                  <a href="https://github.com/EPICLab/synectic/releases/download/${{ github.event.client_payload.version }}/Synectic-${{ github.event.client_payload.raw_version }}-x64.dmg"> ORS\
+                    <i class="fab fa-apple"></i> MacOS</a> | ORS\
+                  <a href="https://github.com/EPICLab/synectic/releases/download/${{ github.event.client_payload.version }}/Synectic-${{ github.event.client_payload.raw_version }}.Setup.exe"> ORS\
+                    <i class="fab fa-windows"></i> Windows</a> | ORS\
+                  <a href="https://github.com/EPICLab/synectic/releases/download/${{ github.event.client_payload.version }}/Synectic-${{ github.event.client_payload.raw_version }}-full.nupkg"> ORS\
+                    <i class="fas fa-cube"></i> NuGet</a> | ORS\
+                  <a href="https://github.com/EPICLab/synectic/releases/download/${{ github.event.client_payload.version }}/synectic_${{ github.event.client_payload.raw_version }}_amd64.deb"> ORS\
+                    <i class="fab fa-linux"></i> deb</a> | ORS\
+                  <a href="https://github.com/EPICLab/synectic/releases/download/${{ github.event.client_payload.version }}/synectic-${{ github.event.client_payload.raw_version }}-1.x86_64.rpm"> ORS\
+                    <i class="fab fa-linux"></i> RPM</a> ORS\
+                </li> ORS\
+              </ul> ORS\
+            </span> ORS\
+          </span> ORS\
+          <br />' '{ print } /<h2>Releases<\/h2>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>
+                  <span>/ { print block }' synectic.html
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .
+          git commit -m "Synectic ${{ github.event.client_payload.raw_version }} release"
+          git push
