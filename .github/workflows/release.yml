@@ -2,7 +2,7 @@ name: Repository Dispatch
 
 on:
   repository_dispatch:
-    types: [release]
+    types: [synectic-release]
 
 jobs:
   release:
@@ -37,12 +37,7 @@ jobs:
               </ul> ORS\
             </span> ORS\
           </span> ORS\
-          <br />' '{ print } /<h2>Releases<\/h2>
-          <table class="table">
-            <tbody>
-              <tr>
-                <td>
-                  <span>/ { print block }' synectic.html
+          <br />' '{ print } /<h2>Releases<\/h2>\n.*?<table class="table">\n.*?<tbody>\n.*?<tr>\n.*?<td>\n.*?<span>/ { print block }' synectic.html
           git config user.name github-actions
           git config user.email github-actions@github.com
           git add .
