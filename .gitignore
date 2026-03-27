@@ -1,5 +1,12 @@
+<<<<<<< HEAD
 # prebuilt software images
 synectics/*
 
 # MacOS directory index files
 .DS_Store
+=======
+node_modules/
+dist/
+.DS_Store
+*.local
+>>>>>>> 9ca348f (Migrate to React/TypeScript/Tailwind stack)
