@@ -1,0 +1,37 @@
+name: Link Checker
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # Run every Monday at 08:00 UTC
+    - cron: "0 8 * * 1"
+  workflow_dispatch:
+
+jobs:
+  link-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Check links on live site
+        uses: lycheeverse/lychee-action@v2
+        with:
+          # Check the live deployed site rather than source files,
+          # so only real broken links are flagged (not build artifacts).
+          args: >
+            --verbose
+            --no-progress
+            --exclude-mail
+            --exclude "^https://twitter\\.com"
+            --exclude "^https://x\\.com"
+            --exclude "^https://linkedin\\.com"
+            --exclude "^https://www\\.linkedin\\.com"
+            --timeout 30
+            --retry-wait-time 5
+            --max-retries 3
+            https://nomatic.dev/
+          fail: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
