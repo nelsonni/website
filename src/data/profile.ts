@@ -501,7 +501,6 @@ export const service: readonly ServiceBlock[] = [
       {
         label: "Empirical Software Engineering Journal (EMSE)",
         note: "April 2026",
-        forthcoming: true,
       },
       {
         label: "Empirical Software Engineering Journal (EMSE)",
