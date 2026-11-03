@@ -42,7 +42,7 @@ export function CompanionPage({ meta }: CompanionPageProps) {
       {/* Abstract */}
       <section className="mb-10">
         <h2 className="font-mono text-2xs tracking-[0.14em] uppercase text-ink-faint mb-4 pb-2 border-b border-rule flex items-center gap-3">
-          <span className="w-5 h-px bg-accent flex-shrink-0" aria-hidden />
+          <span className="w-5 h-px bg-accent shrink-0" aria-hidden />
           Abstract
         </h2>
         <div className="flex flex-col gap-3">
@@ -59,7 +59,7 @@ export function CompanionPage({ meta }: CompanionPageProps) {
         {/* Artifacts */}
         <section>
           <h2 className="font-mono text-2xs tracking-[0.14em] uppercase text-ink-faint mb-4 pb-2 border-b border-rule flex items-center gap-3">
-            <span className="w-5 h-px bg-accent flex-shrink-0" aria-hidden />
+            <span className="w-5 h-px bg-accent shrink-0" aria-hidden />
             Artifacts
           </h2>
           <ul className="flex flex-col gap-2">
@@ -82,7 +82,7 @@ export function CompanionPage({ meta }: CompanionPageProps) {
         <div className="flex flex-col gap-8">
           <section>
             <h2 className="font-mono text-2xs tracking-[0.14em] uppercase text-ink-faint mb-4 pb-2 border-b border-rule flex items-center gap-3">
-              <span className="w-5 h-px bg-accent flex-shrink-0" aria-hidden />
+              <span className="w-5 h-px bg-accent shrink-0" aria-hidden />
               Published In
             </h2>
             <a
@@ -97,7 +97,7 @@ export function CompanionPage({ meta }: CompanionPageProps) {
 
           <section>
             <h2 className="font-mono text-2xs tracking-[0.14em] uppercase text-ink-faint mb-4 pb-2 border-b border-rule flex items-center gap-3">
-              <span className="w-5 h-px bg-accent flex-shrink-0" aria-hidden />
+              <span className="w-5 h-px bg-accent shrink-0" aria-hidden />
               Contacts
             </h2>
             <ul className="flex flex-col gap-1">

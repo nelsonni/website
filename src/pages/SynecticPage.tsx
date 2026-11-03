@@ -33,9 +33,9 @@ function DownloadLink({ dl }: { dl: SynecticDownload }) {
       href={dl.href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1.5 px-2.5 py-1 border border-rule rounded-sm font-mono text-2xs text-ink-muted hover:border-brand hover:text-brand hover:bg-brand-light transition-all duration-150"
+      className="inline-flex items-center gap-1.5 px-2.5 py-1 border border-rule rounded-xs font-mono text-2xs text-ink-muted hover:border-brand hover:text-brand hover:bg-brand-light transition-all duration-150"
     >
-      <Icon className="w-3 h-3 flex-shrink-0" aria-hidden />
+      <Icon className="w-3 h-3 shrink-0" aria-hidden />
       {label}
     </a>
   );
@@ -51,7 +51,7 @@ export function SynecticPage() {
         <img
           src="/assets/synectic_icon.png"
           alt="Synectic IDE icon"
-          className="w-20 h-20 flex-shrink-0 rounded-xl"
+          className="w-20 h-20 shrink-0 rounded-xl"
           onError={(e) => {
             (e.currentTarget as HTMLImageElement).style.display = "none";
           }}
@@ -79,7 +79,7 @@ export function SynecticPage() {
       {/* Releases */}
       <section>
         <h2 className="font-mono text-2xs tracking-[0.14em] uppercase text-ink-faint mb-6 pb-2 border-b border-rule flex items-center gap-3">
-          <span className="w-5 h-px bg-accent flex-shrink-0" aria-hidden />
+          <span className="w-5 h-px bg-accent shrink-0" aria-hidden />
           Releases
         </h2>
 
@@ -97,7 +97,7 @@ export function SynecticPage() {
               <div className="font-mono font-medium text-[0.85rem] text-ink-muted pt-0.5">
                 {release.version}
                 {idx === 0 && (
-                  <span className="ml-2 inline-block px-1.5 py-px bg-accent-light text-accent text-2xs rounded-sm uppercase tracking-[0.05em]">
+                  <span className="ml-2 inline-block px-1.5 py-px bg-accent-light text-accent text-2xs rounded-xs uppercase tracking-[0.05em]">
                     Latest
                   </span>
                 )}
@@ -109,7 +109,7 @@ export function SynecticPage() {
                   href={release.notesHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-2.5 py-1 border border-rule rounded-sm font-mono text-2xs text-ink-muted hover:border-accent hover:text-accent hover:bg-accent-light transition-all duration-150"
+                  className="inline-block px-2.5 py-1 border border-rule rounded-xs font-mono text-2xs text-ink-muted hover:border-accent hover:text-accent hover:bg-accent-light transition-all duration-150"
                 >
                   Release Notes
                 </a>

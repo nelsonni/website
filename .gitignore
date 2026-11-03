@@ -10,3 +10,4 @@ dist/
 .DS_Store
 *.local
 >>>>>>> 9ca348f (Migrate to React/TypeScript/Tailwind stack)
+*.tsbuildinfo
