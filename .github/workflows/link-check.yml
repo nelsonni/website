@@ -3,6 +3,7 @@ name: Link Checker
 on:
   push:
     branches: [main]
+  pull_request:
   schedule:
     # Run every Monday at 08:00 UTC
     - cron: "0 8 * * 1"
@@ -13,25 +14,30 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
-      - name: Check links on live site
+      # The site is a single-page app: the deployed HTML is an empty
+      # <div id="root"> and every link lives in the TypeScript source.
+      # So check the URLs in the source files, not the live page.
+      # Absolute https://nomatic.dev/... links are still checked against
+      # the live site, so missing deployed files are caught too.
+      - name: Check links in site source
         uses: lycheeverse/lychee-action@v2
         with:
-          # Check the live deployed site rather than source files,
-          # so only real broken links are flagged (not build artifacts).
           args: >
-            --verbose
             --no-progress
-            --exclude-mail
-            --exclude "^https://twitter\\.com"
-            --exclude "^https://x\\.com"
-            --exclude "^https://linkedin\\.com"
-            --exclude "^https://www\\.linkedin\\.com"
+            --exclude "%7Bv%7D"
+            --exclude "^https://fonts\\.(googleapis|gstatic)\\.com"
+            --exclude "^https://(www\\.)?(twitter|x|linkedin)\\.com"
+            --exclude "^https://scholar\\.google\\.com"
+            --accept "200..=299,403,429"
             --timeout 30
             --retry-wait-time 5
             --max-retries 3
-            https://nomatic.dev/
+            "./src/**/*.ts"
+            "./src/**/*.tsx"
+            "./index.html"
+          jobSummary: true
           fail: false
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -102,6 +102,15 @@ export function Sidebar() {
             <li key={href}>
               <a
                 href={href}
+                onClick={(e) => {
+                  // The app uses HashRouter, so letting the browser follow
+                  // "#about" would navigate to the (nonexistent) route
+                  // "/about" and blank the page. Scroll to the section instead.
+                  e.preventDefault();
+                  document
+                    .getElementById(href.slice(1))
+                    ?.scrollIntoView({ behavior: "smooth" });
+                }}
                 className="block font-mono text-xs tracking-[0.05em] uppercase text-ink-faint py-0.5 hover:text-accent transition-colors duration-150"
               >
                 {label}

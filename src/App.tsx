@@ -26,7 +26,7 @@ function HomePage() {
         <Service />
       </main>
       <footer className="border-l border-rule pl-20 pb-12 font-mono text-2xs text-ink-faint tracking-[0.04em]">
-        Nicholas Nelson · nomatic.dev · Updated March 2026
+        Nicholas Nelson · nomatic.dev · Updated November 2026
       </footer>
     </div>
   );
