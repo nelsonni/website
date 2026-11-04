@@ -21,8 +21,8 @@ import type {
 export const contacts: readonly ContactLink[] = [
   {
     id: "email",
-    label: "nelsonni@oregonstate.edu",
-    href: "mailto:nelsonni@oregonstate.edu",
+    label: "nnelson@clark.edu",
+    href: "mailto:nnelson@clark.edu",
     Icon: MdOutlineEmail,
   },
   {
@@ -56,7 +56,7 @@ export const contacts: readonly ContactLink[] = [
   {
     id: "orcid",
     label: "ORCID",
-    href: "http://orcid.org/0000-0002-6365-7152",
+    href: "https://orcid.org/0000-0002-6365-7152",
     Icon: SiOrcid,
     external: true,
   },
@@ -103,7 +103,7 @@ export const experience: readonly ExperienceItem[] = [
     orgUrl: "https://www.clark.edu/",
     location: "Vancouver, WA",
     description:
-      "Teaching undergraduate software engineering courses in the Computer Science & Engineering department.",
+      "Teaching undergraduate software engineering and algorithms courses in the Computer Science & Engineering department.",
     badges: [{ label: "Current", variant: "current" }],
   },
   {
@@ -340,7 +340,7 @@ export const publications: readonly Publication[] = [
     links: [
       {
         label: "Conference",
-        href: "http://esec-fse17.uni-paderborn.de/",
+        href: "https://esec-fse17.uni-paderborn.de/",
       },
       {
         label: "Pre-print",
@@ -434,6 +434,11 @@ export const teaching: readonly TeachingBlock[] = [
     period: "Sep 2025 – Present",
     courses: [
       {
+        code: "CSBS 310",
+        name: "Software Engineering",
+        terms: "Fall 2026",
+      },
+      {
         code: "CSE 310",
         name: "Software Engineering",
         terms: "Fall 2025",
@@ -494,6 +499,16 @@ export const teaching: readonly TeachingBlock[] = [
 // ── Service ───────────────────────────────────────────────────────────────────
 
 export const service: readonly ServiceBlock[] = [
+  {
+    id: "community",
+    heading: "Community",
+    entries: [
+      {
+        label: "Board of Trustees, International School of Portland",
+        href: "https://www.intlschool.org/about-us/board-of-trustees",
+      },
+    ],
+  },
   {
     id: "reviewer",
     heading: "Reviewer",

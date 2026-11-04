@@ -45,6 +45,16 @@ function archiveDownloads(v: string): SynecticRelease["downloads"] {
 
 export const synecticReleases: readonly SynecticRelease[] = [
   {
+    version: "5.0.2",
+    notesHref: `${BASE}/tag/v5.0.2`,
+    downloads: archiveDownloads("5.0.2"),
+  },
+  {
+    version: "5.0.0",
+    notesHref: `${BASE}/tag/v5.0.0`,
+    downloads: archiveDownloads("5.0.0"),
+  },
+  {
     version: "4.4.0",
     notesHref: `${BASE}/tag/v4.4.0`,
     downloads: installerDownloads("4.4.0"),

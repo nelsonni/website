@@ -36,7 +36,7 @@ export function CompanionLayout({ title, children }: CompanionLayoutProps) {
         <Link to="/" className="hover:text-accent transition-colors duration-150">
           Nicholas Nelson
         </Link>{" "}
-        · nomatic.dev · Updated March 2026
+        · nomatic.dev · Updated November 2026
       </footer>
     </div>
   );

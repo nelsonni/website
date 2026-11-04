@@ -52,7 +52,7 @@ export function About() {
           <ExternalLink href="https://www.clark.edu/">
             Clark College
           </ExternalLink>
-          , teaching undergraduate software engineering courses.
+          , teaching undergraduate software engineering and algorithms courses.
         </p>
 
         <p>

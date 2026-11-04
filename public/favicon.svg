@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="12" fill="#1a1814"/>
+  <!-- "N" built from shapes so it renders identically without web fonts -->
+  <path fill="#f8f5f0" d="M15 13h8.5l17.5 27.5V13H49v38h-8.5L23 23.5V51h-8z"/>
+  <rect x="15" y="54" width="34" height="3" rx="1.5" fill="#b85c2c"/>
+</svg>
