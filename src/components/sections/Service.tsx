@@ -21,7 +21,7 @@ function ServiceEntryRow({ entry }: { entry: ServiceEntry }) {
         <span className="text-ink-faint"> — {entry.note}</span>
       )}
       {entry.forthcoming && (
-        <span className="inline-block ml-1.5 px-1 py-px border border-accent-light rounded-sm bg-accent-light font-mono text-2xs text-accent uppercase tracking-[0.04em] align-middle">
+        <span className="inline-block ml-1.5 px-1 py-px border border-accent-light rounded-xs bg-accent-light font-mono text-2xs text-accent uppercase tracking-[0.04em] align-middle">
           Forthcoming
         </span>
       )}

@@ -13,7 +13,7 @@ function Avatar() {
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className="relative w-28 h-28 flex-shrink-0">
+    <div className="relative w-28 h-28 shrink-0">
       {/* Dashed ring */}
       <span
         className="absolute -inset-1.5 rounded-full border border-dashed border-rule pointer-events-none"
@@ -59,7 +59,7 @@ export function Sidebar() {
         {contacts.map(({ id, label, href, Icon, external }) => (
           <li key={id} className="flex items-center gap-2 min-w-0">
             <Icon
-              className="w-4 h-4 text-ink-faint flex-shrink-0"
+              className="w-4 h-4 text-ink-faint shrink-0"
               aria-hidden
             />
             <a
@@ -86,7 +86,7 @@ export function Sidebar() {
           <a
             key={label}
             href={href}
-            className="inline-block px-3 py-1 border border-rule rounded-sm font-mono text-2xs text-ink-muted tracking-[0.04em] bg-white hover:border-accent hover:text-accent hover:bg-accent-light transition-all duration-150"
+            className="inline-block px-3 py-1 border border-rule rounded-xs font-mono text-2xs text-ink-muted tracking-[0.04em] bg-white hover:border-accent hover:text-accent hover:bg-accent-light transition-all duration-150"
             target="_blank"
             rel="noopener noreferrer"
           >

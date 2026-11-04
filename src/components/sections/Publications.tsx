@@ -63,7 +63,7 @@ function PublicationRow({ pub }: { pub: Publication }) {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-block px-2 py-0.5 border border-rule rounded-sm font-mono text-2xs text-ink-muted tracking-[0.03em] hover:border-brand hover:text-brand transition-all duration-150"
+              className="inline-block px-2 py-0.5 border border-rule rounded-xs font-mono text-2xs text-ink-muted tracking-[0.03em] hover:border-brand hover:text-brand transition-all duration-150"
             >
               {link.label}
             </a>
@@ -71,7 +71,7 @@ function PublicationRow({ pub }: { pub: Publication }) {
           {awards?.map((award) => (
             <span
               key={award}
-              className="inline-flex items-center px-2 py-0.5 border border-accent-light rounded-sm bg-accent-light font-mono text-2xs text-accent tracking-[0.04em] uppercase"
+              className="inline-flex items-center px-2 py-0.5 border border-accent-light rounded-xs bg-accent-light font-mono text-2xs text-accent tracking-[0.04em] uppercase"
             >
               {award}
             </span>

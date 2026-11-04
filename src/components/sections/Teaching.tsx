@@ -5,7 +5,7 @@ import type { TeachingBlock, Course } from "@/types";
 function CourseRow({ course }: { course: Course }) {
   return (
     <li className="grid grid-cols-[5.5rem_1fr] gap-x-3 items-baseline">
-      <span className="font-mono text-xs+ text-brand">{course.code}</span>
+      <span className="font-mono text-xs-plus text-brand">{course.code}</span>
       <div>
         <span className="text-[0.83rem] text-ink">{course.name}</span>
         <div className="font-mono text-2xs text-ink-faint mt-0.5">
